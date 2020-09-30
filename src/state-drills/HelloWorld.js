@@ -5,28 +5,24 @@ class HelloWorld extends Component {
     state = {
 
         who: 'World',
-        friend: 'Friend',
-        react: 'React'
 
     }
 
+
+
     render() {
-        let word = 'word'
 
         return (
             < div >
 
-                <button onClick={() => {
-                    word = this.state.who;
-                    console.log(word);
-                }}>World</button>
-                <button>React</button>
-                <button>Friend</button>
+                <button onClick={() => this.setState({ who: 'World' })}> World</button>
+                <button onClick={() => this.setState({ who: 'React' })}>React</button>
+                <button onClick={() => this.setState({ who: 'Friend' })}>Friend</button>
 
-                <p>Hello, {word}</p>
+                <p>Hello, {this.state.who}</p>
 
 
-            </div>
+            </div >
 
         );
 
